@@ -1,0 +1,426 @@
+{
+  "generated_at": "2026-09-16T12:58:43.045Z",
+  "countries": [
+    {
+      "code": "usa",
+      "name": "美国",
+      "name_en": "USA",
+      "flag": "https://wiki.warthunder.com/static/country_svg/country_usa.svg",
+      "vehicle_count": 154,
+      "researchable_vehicle_count": 94,
+      "premium_vehicle_count": 60,
+      "total_research_rp": 10172000,
+      "total_purchase_sl": 32493790,
+      "mod_vehicle_count": 151,
+      "generated_at": "2026-09-16T12:58:42.962Z",
+      "types": {
+        "helicopter": {
+          "vehicle_count": 19,
+          "researchable_vehicle_count": 12,
+          "premium_vehicle_count": 7,
+          "total_research_rp": 3739000,
+          "total_purchase_sl": 12360000,
+          "mod_vehicle_count": 19,
+          "generated_at": "2026-09-16T12:58:42.968Z"
+        },
+        "ground": {
+          "vehicle_count": 154,
+          "researchable_vehicle_count": 94,
+          "premium_vehicle_count": 60,
+          "total_research_rp": 10172000,
+          "total_purchase_sl": 32493790,
+          "mod_vehicle_count": 151,
+          "generated_at": "2026-09-16T12:58:42.962Z"
+        },
+        "aviation": {
+          "vehicle_count": 199,
+          "researchable_vehicle_count": 131,
+          "premium_vehicle_count": 68,
+          "total_research_rp": 11415500,
+          "total_purchase_sl": 37115750,
+          "mod_vehicle_count": 197,
+          "generated_at": "2026-09-16T12:58:42.966Z"
+        }
+      }
+    },
+    {
+      "code": "germany",
+      "name": "德国",
+      "name_en": "Germany",
+      "flag": "https://wiki.warthunder.com/static/country_svg/country_germany.svg",
+      "vehicle_count": 178,
+      "researchable_vehicle_count": 115,
+      "premium_vehicle_count": 63,
+      "total_research_rp": 9784900,
+      "total_purchase_sl": 32494440,
+      "mod_vehicle_count": 176,
+      "generated_at": "2026-09-16T12:58:42.971Z",
+      "types": {
+        "ground": {
+          "vehicle_count": 178,
+          "researchable_vehicle_count": 115,
+          "premium_vehicle_count": 63,
+          "total_research_rp": 9784900,
+          "total_purchase_sl": 32494440,
+          "mod_vehicle_count": 176,
+          "generated_at": "2026-09-16T12:58:42.971Z"
+        },
+        "aviation": {
+          "vehicle_count": 186,
+          "researchable_vehicle_count": 120,
+          "premium_vehicle_count": 66,
+          "total_research_rp": 8535300,
+          "total_purchase_sl": 26890700,
+          "mod_vehicle_count": 185,
+          "generated_at": "2026-09-16T12:58:42.975Z"
+        },
+        "helicopter": {
+          "vehicle_count": 12,
+          "researchable_vehicle_count": 9,
+          "premium_vehicle_count": 3,
+          "total_research_rp": 2570000,
+          "total_purchase_sl": 7368730,
+          "mod_vehicle_count": 11,
+          "generated_at": "2026-09-16T12:58:42.977Z"
+        }
+      }
+    },
+    {
+      "code": "ussr",
+      "name": "苏联",
+      "name_en": "USSR",
+      "flag": "https://wiki.warthunder.com/static/country_svg/country_ussr.svg",
+      "vehicle_count": 193,
+      "researchable_vehicle_count": 117,
+      "premium_vehicle_count": 76,
+      "total_research_rp": 11995000,
+      "total_purchase_sl": 38921450,
+      "mod_vehicle_count": 188,
+      "generated_at": "2026-09-16T12:58:42.979Z",
+      "types": {
+        "ground": {
+          "vehicle_count": 193,
+          "researchable_vehicle_count": 117,
+          "premium_vehicle_count": 76,
+          "total_research_rp": 11995000,
+          "total_purchase_sl": 38921450,
+          "mod_vehicle_count": 188,
+          "generated_at": "2026-09-16T12:58:42.979Z"
+        },
+        "aviation": {
+          "vehicle_count": 198,
+          "researchable_vehicle_count": 129,
+          "premium_vehicle_count": 69,
+          "total_research_rp": 10207700,
+          "total_purchase_sl": 34303130,
+          "mod_vehicle_count": 197,
+          "generated_at": "2026-09-16T12:58:42.982Z"
+        },
+        "helicopter": {
+          "vehicle_count": 15,
+          "researchable_vehicle_count": 12,
+          "premium_vehicle_count": 3,
+          "total_research_rp": 3760000,
+          "total_purchase_sl": 11510000,
+          "mod_vehicle_count": 15,
+          "generated_at": "2026-09-16T12:58:42.984Z"
+        }
+      }
+    },
+    {
+      "code": "britain",
+      "name": "英国",
+      "name_en": "Great Britain",
+      "flag": "https://wiki.warthunder.com/static/country_svg/country_britain.svg",
+      "vehicle_count": 145,
+      "researchable_vehicle_count": 102,
+      "premium_vehicle_count": 43,
+      "total_research_rp": 9949500,
+      "total_purchase_sl": 34691450,
+      "mod_vehicle_count": 143,
+      "generated_at": "2026-09-16T12:58:42.986Z",
+      "types": {
+        "ground": {
+          "vehicle_count": 145,
+          "researchable_vehicle_count": 102,
+          "premium_vehicle_count": 43,
+          "total_research_rp": 9949500,
+          "total_purchase_sl": 34691450,
+          "mod_vehicle_count": 143,
+          "generated_at": "2026-09-16T12:58:42.986Z"
+        },
+        "aviation": {
+          "vehicle_count": 164,
+          "researchable_vehicle_count": 115,
+          "premium_vehicle_count": 49,
+          "total_research_rp": 9527800,
+          "total_purchase_sl": 30394410,
+          "mod_vehicle_count": 161,
+          "generated_at": "2026-09-16T12:58:42.988Z"
+        },
+        "helicopter": {
+          "vehicle_count": 10,
+          "researchable_vehicle_count": 7,
+          "premium_vehicle_count": 3,
+          "total_research_rp": 2090000,
+          "total_purchase_sl": 6976420,
+          "mod_vehicle_count": 9,
+          "generated_at": "2026-09-16T12:58:42.996Z"
+        }
+      }
+    },
+    {
+      "code": "japan",
+      "name": "日本",
+      "name_en": "Japan",
+      "flag": "https://wiki.warthunder.com/static/country_svg/country_japan.svg",
+      "vehicle_count": 87,
+      "researchable_vehicle_count": 69,
+      "premium_vehicle_count": 18,
+      "total_research_rp": 7209400,
+      "total_purchase_sl": 22952070,
+      "mod_vehicle_count": 84,
+      "generated_at": "2026-09-16T12:58:42.998Z",
+      "types": {
+        "ground": {
+          "vehicle_count": 87,
+          "researchable_vehicle_count": 69,
+          "premium_vehicle_count": 18,
+          "total_research_rp": 7209400,
+          "total_purchase_sl": 22952070,
+          "mod_vehicle_count": 84,
+          "generated_at": "2026-09-16T12:58:42.998Z"
+        },
+        "aviation": {
+          "vehicle_count": 140,
+          "researchable_vehicle_count": 105,
+          "premium_vehicle_count": 35,
+          "total_research_rp": 7556200,
+          "total_purchase_sl": 23629770,
+          "mod_vehicle_count": 136,
+          "generated_at": "2026-09-16T12:58:43.000Z"
+        },
+        "helicopter": {
+          "vehicle_count": 8,
+          "researchable_vehicle_count": 6,
+          "premium_vehicle_count": 2,
+          "total_research_rp": 1910000,
+          "total_purchase_sl": 5410000,
+          "mod_vehicle_count": 8,
+          "generated_at": "2026-09-16T12:58:43.002Z"
+        }
+      }
+    },
+    {
+      "code": "china",
+      "name": "中国",
+      "name_en": "China",
+      "flag": "https://wiki.warthunder.com/static/country_svg/country_china.svg",
+      "vehicle_count": 99,
+      "researchable_vehicle_count": 75,
+      "premium_vehicle_count": 24,
+      "total_research_rp": 9757100,
+      "total_purchase_sl": 32031890,
+      "mod_vehicle_count": 97,
+      "generated_at": "2026-09-16T12:58:43.004Z",
+      "types": {
+        "ground": {
+          "vehicle_count": 99,
+          "researchable_vehicle_count": 75,
+          "premium_vehicle_count": 24,
+          "total_research_rp": 9757100,
+          "total_purchase_sl": 32031890,
+          "mod_vehicle_count": 97,
+          "generated_at": "2026-09-16T12:58:43.004Z"
+        },
+        "aviation": {
+          "vehicle_count": 89,
+          "researchable_vehicle_count": 70,
+          "premium_vehicle_count": 19,
+          "total_research_rp": 8101900,
+          "total_purchase_sl": 24776830,
+          "mod_vehicle_count": 88,
+          "generated_at": "2026-09-16T12:58:43.006Z"
+        },
+        "helicopter": {
+          "vehicle_count": 13,
+          "researchable_vehicle_count": 10,
+          "premium_vehicle_count": 3,
+          "total_research_rp": 3250000,
+          "total_purchase_sl": 10047650,
+          "mod_vehicle_count": 13,
+          "generated_at": "2026-09-16T12:58:43.007Z"
+        }
+      }
+    },
+    {
+      "code": "italy",
+      "name": "意大利",
+      "name_en": "Italy",
+      "flag": "https://wiki.warthunder.com/static/country_svg/country_italy.svg",
+      "vehicle_count": 108,
+      "researchable_vehicle_count": 83,
+      "premium_vehicle_count": 25,
+      "total_research_rp": 8615900,
+      "total_purchase_sl": 27390380,
+      "mod_vehicle_count": 106,
+      "generated_at": "2026-09-16T12:58:43.008Z",
+      "types": {
+        "ground": {
+          "vehicle_count": 108,
+          "researchable_vehicle_count": 83,
+          "premium_vehicle_count": 25,
+          "total_research_rp": 8615900,
+          "total_purchase_sl": 27390380,
+          "mod_vehicle_count": 106,
+          "generated_at": "2026-09-16T12:58:43.008Z"
+        },
+        "aviation": {
+          "vehicle_count": 111,
+          "researchable_vehicle_count": 88,
+          "premium_vehicle_count": 23,
+          "total_research_rp": 7465600,
+          "total_purchase_sl": 21969130,
+          "mod_vehicle_count": 111,
+          "generated_at": "2026-09-16T12:58:43.010Z"
+        },
+        "helicopter": {
+          "vehicle_count": 9,
+          "researchable_vehicle_count": 6,
+          "premium_vehicle_count": 3,
+          "total_research_rp": 1720000,
+          "total_purchase_sl": 4958000,
+          "mod_vehicle_count": 9,
+          "generated_at": "2026-09-16T12:58:43.012Z"
+        }
+      }
+    },
+    {
+      "code": "france",
+      "name": "法国",
+      "name_en": "France",
+      "flag": "https://wiki.warthunder.com/static/country_svg/country_france.svg",
+      "vehicle_count": 107,
+      "researchable_vehicle_count": 83,
+      "premium_vehicle_count": 24,
+      "total_research_rp": 8942300,
+      "total_purchase_sl": 27748030,
+      "mod_vehicle_count": 104,
+      "generated_at": "2026-09-16T12:58:43.013Z",
+      "types": {
+        "ground": {
+          "vehicle_count": 107,
+          "researchable_vehicle_count": 83,
+          "premium_vehicle_count": 24,
+          "total_research_rp": 8942300,
+          "total_purchase_sl": 27748030,
+          "mod_vehicle_count": 104,
+          "generated_at": "2026-09-16T12:58:43.013Z"
+        },
+        "aviation": {
+          "vehicle_count": 113,
+          "researchable_vehicle_count": 84,
+          "premium_vehicle_count": 29,
+          "total_research_rp": 8166900,
+          "total_purchase_sl": 24624280,
+          "mod_vehicle_count": 112,
+          "generated_at": "2026-09-16T12:58:43.015Z"
+        },
+        "helicopter": {
+          "vehicle_count": 12,
+          "researchable_vehicle_count": 9,
+          "premium_vehicle_count": 3,
+          "total_research_rp": 2450000,
+          "total_purchase_sl": 7486540,
+          "mod_vehicle_count": 12,
+          "generated_at": "2026-09-16T12:58:43.017Z"
+        }
+      }
+    },
+    {
+      "code": "sweden",
+      "name": "瑞典",
+      "name_en": "Sweden",
+      "flag": "https://wiki.warthunder.com/static/country_svg/country_sweden.svg",
+      "vehicle_count": 96,
+      "researchable_vehicle_count": 75,
+      "premium_vehicle_count": 21,
+      "total_research_rp": 9039100,
+      "total_purchase_sl": 29302280,
+      "mod_vehicle_count": 95,
+      "generated_at": "2026-09-16T12:58:43.018Z",
+      "types": {
+        "ground": {
+          "vehicle_count": 96,
+          "researchable_vehicle_count": 75,
+          "premium_vehicle_count": 21,
+          "total_research_rp": 9039100,
+          "total_purchase_sl": 29302280,
+          "mod_vehicle_count": 95,
+          "generated_at": "2026-09-16T12:58:43.018Z"
+        },
+        "aviation": {
+          "vehicle_count": 75,
+          "researchable_vehicle_count": 55,
+          "premium_vehicle_count": 20,
+          "total_research_rp": 5732000,
+          "total_purchase_sl": 19043150,
+          "mod_vehicle_count": 74,
+          "generated_at": "2026-09-16T12:58:43.020Z"
+        },
+        "helicopter": {
+          "vehicle_count": 6,
+          "researchable_vehicle_count": 5,
+          "premium_vehicle_count": 1,
+          "total_research_rp": 1280000,
+          "total_purchase_sl": 3879270,
+          "mod_vehicle_count": 6,
+          "generated_at": "2026-09-16T12:58:43.021Z"
+        }
+      }
+    },
+    {
+      "code": "israel",
+      "name": "以色列",
+      "name_en": "Israel",
+      "flag": "https://wiki.warthunder.com/static/country_svg/country_israel.svg",
+      "vehicle_count": 57,
+      "researchable_vehicle_count": 50,
+      "premium_vehicle_count": 7,
+      "total_research_rp": 8131000,
+      "total_purchase_sl": 26616080,
+      "mod_vehicle_count": 54,
+      "generated_at": "2026-09-16T12:58:43.022Z",
+      "types": {
+        "ground": {
+          "vehicle_count": 57,
+          "researchable_vehicle_count": 50,
+          "premium_vehicle_count": 7,
+          "total_research_rp": 8131000,
+          "total_purchase_sl": 26616080,
+          "mod_vehicle_count": 54,
+          "generated_at": "2026-09-16T12:58:43.022Z"
+        },
+        "aviation": {
+          "vehicle_count": 49,
+          "researchable_vehicle_count": 37,
+          "premium_vehicle_count": 12,
+          "total_research_rp": 6779000,
+          "total_purchase_sl": 21299990,
+          "mod_vehicle_count": 39,
+          "generated_at": "2026-09-16T12:58:43.024Z"
+        },
+        "helicopter": {
+          "vehicle_count": 8,
+          "researchable_vehicle_count": 7,
+          "premium_vehicle_count": 1,
+          "total_research_rp": 2080000,
+          "total_purchase_sl": 5919270,
+          "mod_vehicle_count": 8,
+          "generated_at": "2026-09-16T12:58:43.025Z"
+        }
+      }
+    }
+  ],
+  "game_data_version": "2.59.0.7"
+}

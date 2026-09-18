@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{75B1F8D6-7D0E-4001-858C-3686146C3EC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarThunderTechTree.Native", "src\WarThunderTechTree.Native\WarThunderTechTree.Native.csproj", "{DDC30C13-68AE-4CE9-B08E-85BA3FC667A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDC30C13-68AE-4CE9-B08E-85BA3FC667A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDC30C13-68AE-4CE9-B08E-85BA3FC667A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDC30C13-68AE-4CE9-B08E-85BA3FC667A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDC30C13-68AE-4CE9-B08E-85BA3FC667A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DDC30C13-68AE-4CE9-B08E-85BA3FC667A5} = {75B1F8D6-7D0E-4001-858C-3686146C3EC2}
+	EndGlobalSection
+EndGlobal

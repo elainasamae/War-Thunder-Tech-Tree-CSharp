@@ -1,0 +1,2958 @@
+{
+  "source": "https://wiki.warthunder.com/helicopters?v=t&t_c=usa",
+  "generated_at": "2026-09-15T10:59:53.507Z",
+  "scope": "Per-vehicle modification (mod) lists with research costs",
+  "vehicles": {
+    "ah_1w_china": {
+      "vehicle": "AH-1W",
+      "source_url": "https://wiki.warthunder.com/unit/ah_1w_china",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "19,000",
+              "purchase_sl": 19000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            },
+            {
+              "mod_id": "MAW_system_heli_false_thermal_targets_large",
+              "name": "MAW",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_false_thermal_targets.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "19,000",
+              "purchase_sl": 19000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "heli_counterMeasures",
+              "name": "IRCM",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/countermeasures.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "19,000",
+              "purchase_sl": 19000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "air_extinguisher",
+              "name": "EFS",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine_extinguisher.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "24,000",
+              "research_rp": 24000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 690",
+              "ge_cost": 690
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "t_160_belt_pack",
+              "name": "Offensive 20 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            },
+            {
+              "mod_id": "f4c_zuni",
+              "name": "LAU-10/A",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket_large.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            },
+            {
+              "mod_id": "ah_1_TOW2",
+              "name": "TOW-2",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "19,000",
+              "purchase_sl": 19000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "us_apkws",
+              "name": "APKWS II",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 2,
+              "column": 3,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "19,000",
+              "purchase_sl": 19000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "t_160_new_gun",
+              "name": "New 20 mm cannons",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            },
+            {
+              "mod_id": "ah_1_AGM_114_8",
+              "name": "AGM-114",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            },
+            {
+              "mod_id": "anti_radiation_missile_agm_122",
+              "name": "AGM-122",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 3,
+              "column": 3,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 340",
+              "ge_cost": 340
+            },
+            {
+              "mod_id": "us_gpu_2a",
+              "name": "GPU-2/A. gun pod",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/gunpods.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "24,000",
+              "research_rp": 24000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 690",
+              "ge_cost": 690
+            },
+            {
+              "mod_id": "ah_1_AGM_114_16",
+              "name": "AGM-114 2",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": "24,000",
+              "research_rp": 24000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 690",
+              "ge_cost": 690
+            },
+            {
+              "mod_id": "us_aim_9l",
+              "name": "AIM-9L",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 4,
+              "column": 3,
+              "research_display": "24,000",
+              "research_rp": 24000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 690",
+              "ge_cost": 690
+            }
+          ]
+        }
+      ],
+      "mod_count": 20,
+      "total_research_rp": 293000,
+      "total_purchase_sl": 433000
+    },
+    "ah_64e_china": {
+      "vehicle": "AH-64E",
+      "source_url": "https://wiki.warthunder.com/unit/ah_64e_china",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 350",
+              "ge_cost": 350
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 390",
+              "ge_cost": 390
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 350",
+              "ge_cost": 350
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 350",
+              "ge_cost": 350
+            },
+            {
+              "mod_id": "MAW_system_heli_false_thermal_targets_large",
+              "name": "MAW",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_false_thermal_targets.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 350",
+              "ge_cost": 350
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 390",
+              "ge_cost": 390
+            },
+            {
+              "mod_id": "air_extinguisher",
+              "name": "EFS",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine_extinguisher.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 350",
+              "ge_cost": 350
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 350",
+              "ge_cost": 350
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "49,000",
+              "research_rp": 49000,
+              "purchase_display": "72,000",
+              "purchase_sl": 72000,
+              "ge_display": "or 1,100",
+              "ge_cost": 1100
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "aden_new_gun",
+              "name": "New 30 mm cannons",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 350",
+              "ge_cost": 350
+            },
+            {
+              "mod_id": "ah_1_AGM_114_16",
+              "name": "AGM-114 2",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 390",
+              "ge_cost": 390
+            },
+            {
+              "mod_id": "us_apkws",
+              "name": "APKWS II",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 390",
+              "ge_cost": 390
+            },
+            {
+              "mod_id": "us_agm_179",
+              "name": "AGM-179 (SAL)",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 350",
+              "ge_cost": 350
+            },
+            {
+              "mod_id": "stinger_aam",
+              "name": "AIM-92 Stinger",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 350",
+              "ge_cost": 350
+            },
+            {
+              "mod_id": "us_agm_179_ir",
+              "name": "AGM-179 (IR)",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "49,000",
+              "research_rp": 49000,
+              "purchase_display": "72,000",
+              "purchase_sl": 72000,
+              "ge_display": "or 1,100",
+              "ge_cost": 1100
+            }
+          ]
+        }
+      ],
+      "mod_count": 15,
+      "total_research_rp": 301000,
+      "total_purchase_sl": 442000
+    },
+    "mi_35m_pakistan": {
+      "vehicle": "Mi-35M",
+      "source_url": "https://wiki.warthunder.com/unit/mi_35m_pakistan",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "automatic_air_extinguisher",
+              "name": "EFS(a)",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine_extinguisher.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "ns23_belt_pack",
+              "name": "Offensive 23 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "mi_28_C13",
+              "name": "B-13L",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket_large.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "heli_screen_exhaust_device",
+              "name": "HIRSS",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_screen_exhaust_device.png",
+              "tier": 1,
+              "column": 3,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "ns23_new_gun",
+              "name": "New 23 mm cannons",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "mi_35_9M114_8",
+              "name": "APU-8/4-U 8 Shturm",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "countermeasures_belt_pack",
+              "name": "Flares/Chaff",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_false_thermal_targets.png",
+              "tier": 2,
+              "column": 3,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "il_28sh_upk23_gunpod",
+              "name": "UPK-23-250 gun pod",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/gunpods.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "heli_counterMeasures",
+              "name": "IRCM",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/countermeasures.png",
+              "tier": 3,
+              "column": 3,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "mi_35_9M39",
+              "name": "9M39",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "mi_35_9M120_4",
+              "name": "APU-8/4-U 4 Ataka",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 4,
+              "column": 3,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            }
+          ]
+        }
+      ],
+      "mod_count": 18,
+      "total_research_rp": 0,
+      "total_purchase_sl": 0
+    },
+    "oh_58d_china": {
+      "vehicle": "OH-58D",
+      "source_url": "https://wiki.warthunder.com/unit/oh_58d_china",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "20,000",
+              "research_rp": 20000,
+              "purchase_display": "29,000",
+              "purchase_sl": 29000,
+              "ge_display": "or 410",
+              "ge_cost": 410
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "19,000",
+              "purchase_sl": 19000,
+              "ge_display": "or 270",
+              "ge_cost": 270
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "19,000",
+              "purchase_sl": 19000,
+              "ge_display": "or 270",
+              "ge_cost": 270
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "18,000",
+              "research_rp": 18000,
+              "purchase_display": "27,000",
+              "purchase_sl": 27000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": "32,000",
+              "research_rp": 32000,
+              "purchase_display": "47,000",
+              "purchase_sl": 47000,
+              "ge_display": "or 660",
+              "ge_cost": 660
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket_and_armor",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "20,000",
+              "research_rp": 20000,
+              "purchase_display": "29,000",
+              "purchase_sl": 29000,
+              "ge_display": "or 410",
+              "ge_cost": 410
+            },
+            {
+              "mod_id": "countermeasures_belt_pack",
+              "name": "Flares/Chaff",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_false_thermal_targets.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "19,000",
+              "purchase_sl": 19000,
+              "ge_display": "or 270",
+              "ge_cost": 270
+            },
+            {
+              "mod_id": "heli_counterMeasures",
+              "name": "IRCM",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/countermeasures.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "18,000",
+              "research_rp": 18000,
+              "purchase_display": "27,000",
+              "purchase_sl": 27000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "32,000",
+              "research_rp": 32000,
+              "purchase_display": "47,000",
+              "purchase_sl": 47000,
+              "ge_display": "or 660",
+              "ge_cost": 660
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "us_gau_19",
+              "name": "GP-19 gun pod",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/gunpods.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "20,000",
+              "research_rp": 20000,
+              "purchase_display": "29,000",
+              "purchase_sl": 29000,
+              "ge_display": "or 410",
+              "ge_cost": 410
+            },
+            {
+              "mod_id": "GAU_19_belt_pack",
+              "name": "Offensive 12.7 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "19,000",
+              "purchase_sl": 19000,
+              "ge_display": "or 270",
+              "ge_cost": 270
+            },
+            {
+              "mod_id": "us_apkws",
+              "name": "APKWS II",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "19,000",
+              "purchase_sl": 19000,
+              "ge_display": "or 270",
+              "ge_cost": 270
+            },
+            {
+              "mod_id": "GAU_19_new_gun",
+              "name": "New 12.7 mm MGs",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "18,000",
+              "research_rp": 18000,
+              "purchase_display": "27,000",
+              "purchase_sl": 27000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "us_agm_114k",
+              "name": "AGM-114K",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "18,000",
+              "research_rp": 18000,
+              "purchase_display": "27,000",
+              "purchase_sl": 27000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "stinger_aam",
+              "name": "AIM-92 Stinger",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": "32,000",
+              "research_rp": 32000,
+              "purchase_display": "47,000",
+              "purchase_sl": 47000,
+              "ge_display": "or 660",
+              "ge_cost": 660
+            }
+          ]
+        }
+      ],
+      "mod_count": 15,
+      "total_research_rp": 293000,
+      "total_purchase_sl": 431000
+    },
+    "sa_342l_china": {
+      "vehicle": "SA.342L Gazelle",
+      "source_url": "https://wiki.warthunder.com/unit/sa_342l_china",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "20,000",
+              "purchase_sl": 20000,
+              "ge_display": "or 185",
+              "ge_cost": 185
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "20,000",
+              "research_rp": 20000,
+              "purchase_display": "31,000",
+              "purchase_sl": 31000,
+              "ge_display": "or 290",
+              "ge_cost": 290
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "33,000",
+              "research_rp": 33000,
+              "purchase_display": "52,000",
+              "purchase_sl": 52000,
+              "ge_display": "or 470",
+              "ge_cost": 470
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "20,000",
+              "purchase_sl": 20000,
+              "ge_display": "or 185",
+              "ge_cost": 185
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "20,000",
+              "research_rp": 20000,
+              "purchase_display": "31,000",
+              "purchase_sl": 31000,
+              "ge_display": "or 290",
+              "ge_cost": 290
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "43,000",
+              "research_rp": 43000,
+              "purchase_display": "68,000",
+              "purchase_sl": 68000,
+              "ge_display": "or 610",
+              "ge_cost": 610
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "qjk_99_belt_pack",
+              "name": "Offensive 12.7 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "20,000",
+              "purchase_sl": 20000,
+              "ge_display": "or 185",
+              "ge_cost": 185
+            },
+            {
+              "mod_id": "cn_hf7d",
+              "name": "HF-7D",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "20,000",
+              "purchase_sl": 20000,
+              "ge_display": "or 185",
+              "ge_cost": 185
+            },
+            {
+              "mod_id": "cn_hj8_e",
+              "name": "HJ-8E",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": "20,000",
+              "research_rp": 20000,
+              "purchase_display": "31,000",
+              "purchase_sl": 31000,
+              "ge_display": "or 290",
+              "ge_cost": 290
+            },
+            {
+              "mod_id": "qjk_99_new_gun",
+              "name": "New 12.7 mm MGs",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "33,000",
+              "research_rp": 33000,
+              "purchase_display": "52,000",
+              "purchase_sl": 52000,
+              "ge_display": "or 470",
+              "ge_cost": 470
+            },
+            {
+              "mod_id": "sa_heli_hot",
+              "name": "HOT",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": "43,000",
+              "research_rp": 43000,
+              "purchase_display": "68,000",
+              "purchase_sl": 68000,
+              "ge_display": "or 610",
+              "ge_cost": 610
+            }
+          ]
+        }
+      ],
+      "mod_count": 11,
+      "total_research_rp": 264000,
+      "total_purchase_sl": 413000
+    },
+    "z_10": {
+      "vehicle": "Z-10",
+      "source_url": "https://wiki.warthunder.com/unit/z_10",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 430",
+              "ge_cost": 430
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "19,000",
+              "research_rp": 19000,
+              "purchase_display": "28,000",
+              "purchase_sl": 28000,
+              "ge_display": "or 480",
+              "ge_cost": 480
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 430",
+              "ge_cost": 430
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "type_23l_belt_pack",
+              "name": "Offensive 23 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "cn_hf7d",
+              "name": "HF-7D",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 1,
+              "column": 3,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "MAW_system_heli_false_thermal_targets_large",
+              "name": "MAW",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_false_thermal_targets.png",
+              "tier": 1,
+              "column": 4,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "type_23l_new_gun",
+              "name": "New 23 mm cannons",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 430",
+              "ge_cost": 430
+            },
+            {
+              "mod_id": "cn_akd_9",
+              "name": "AKD-9",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 2,
+              "column": 3,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 430",
+              "ge_cost": 430
+            },
+            {
+              "mod_id": "automatic_air_extinguisher",
+              "name": "EFS(a)",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine_extinguisher.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "19,000",
+              "research_rp": 19000,
+              "purchase_display": "28,000",
+              "purchase_sl": 28000,
+              "ge_display": "or 480",
+              "ge_cost": 480
+            },
+            {
+              "mod_id": "qjk_99_belt_pack",
+              "name": "Offensive 12.7 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "19,000",
+              "research_rp": 19000,
+              "purchase_display": "28,000",
+              "purchase_sl": 28000,
+              "ge_display": "or 480",
+              "ge_cost": 480
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 3,
+              "column": 4,
+              "research_display": "19,000",
+              "research_rp": 19000,
+              "purchase_display": "28,000",
+              "purchase_sl": 28000,
+              "ge_display": "or 480",
+              "ge_cost": 480
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 630",
+              "ge_cost": 630
+            },
+            {
+              "mod_id": "qjk_99_new_gun",
+              "name": "New 12.7 mm MGs",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 630",
+              "ge_cost": 630
+            },
+            {
+              "mod_id": "cn_akd_10",
+              "name": "AKD-10",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 4,
+              "column": 3,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 630",
+              "ge_cost": 630
+            },
+            {
+              "mod_id": "cn_ty_90",
+              "name": "TY-90",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 4,
+              "column": 4,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 630",
+              "ge_cost": 630
+            }
+          ]
+        }
+      ],
+      "mod_count": 17,
+      "total_research_rp": 304000,
+      "total_purchase_sl": 450000
+    },
+    "z_10a": {
+      "vehicle": "Z-10A",
+      "source_url": "https://wiki.warthunder.com/unit/z_10a",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 430",
+              "ge_cost": 430
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "19,000",
+              "research_rp": 19000,
+              "purchase_display": "28,000",
+              "purchase_sl": 28000,
+              "ge_display": "or 480",
+              "ge_cost": 480
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 430",
+              "ge_cost": 430
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "type_23l_belt_pack",
+              "name": "Offensive 23 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "cn_hf7d",
+              "name": "HF-7D",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 1,
+              "column": 3,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "MAW_system_heli_false_thermal_targets_large",
+              "name": "MAW",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_false_thermal_targets.png",
+              "tier": 1,
+              "column": 4,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "type_23l_new_gun",
+              "name": "New 23 mm cannons",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 430",
+              "ge_cost": 430
+            },
+            {
+              "mod_id": "cn_akd_9",
+              "name": "AKD-9",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 2,
+              "column": 3,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 430",
+              "ge_cost": 430
+            },
+            {
+              "mod_id": "automatic_air_extinguisher",
+              "name": "EFS(a)",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine_extinguisher.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "19,000",
+              "research_rp": 19000,
+              "purchase_display": "28,000",
+              "purchase_sl": 28000,
+              "ge_display": "or 480",
+              "ge_cost": 480
+            },
+            {
+              "mod_id": "qjk_99_belt_pack",
+              "name": "Offensive 12.7 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "19,000",
+              "research_rp": 19000,
+              "purchase_display": "28,000",
+              "purchase_sl": 28000,
+              "ge_display": "or 480",
+              "ge_cost": 480
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 3,
+              "column": 4,
+              "research_display": "19,000",
+              "research_rp": 19000,
+              "purchase_display": "28,000",
+              "purchase_sl": 28000,
+              "ge_display": "or 480",
+              "ge_cost": 480
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 630",
+              "ge_cost": 630
+            },
+            {
+              "mod_id": "qjk_99_new_gun",
+              "name": "New 12.7 mm MGs",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 630",
+              "ge_cost": 630
+            },
+            {
+              "mod_id": "cn_akd_10",
+              "name": "AKD-10",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 4,
+              "column": 3,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 630",
+              "ge_cost": 630
+            },
+            {
+              "mod_id": "cn_ty_90",
+              "name": "TY-90",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 4,
+              "column": 4,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 630",
+              "ge_cost": 630
+            }
+          ]
+        }
+      ],
+      "mod_count": 17,
+      "total_research_rp": 304000,
+      "total_purchase_sl": 450000
+    },
+    "z_10me": {
+      "vehicle": "Z-10ME",
+      "source_url": "https://wiki.warthunder.com/unit/z_10me",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "10,000",
+              "research_rp": 10000,
+              "purchase_display": "15,000",
+              "purchase_sl": 15000,
+              "ge_display": "or 290",
+              "ge_cost": 290
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 500",
+              "ge_cost": 500
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 440",
+              "ge_cost": 440
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "10,000",
+              "research_rp": 10000,
+              "purchase_display": "15,000",
+              "purchase_sl": 15000,
+              "ge_display": "or 290",
+              "ge_cost": 290
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 500",
+              "ge_cost": 500
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "cn_hf7d",
+              "name": "HF-7D",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "10,000",
+              "research_rp": 10000,
+              "purchase_display": "15,000",
+              "purchase_sl": 15000,
+              "ge_display": "or 290",
+              "ge_cost": 290
+            },
+            {
+              "mod_id": "type_23l_belt_pack",
+              "name": "Offensive 23 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "10,000",
+              "research_rp": 10000,
+              "purchase_display": "15,000",
+              "purchase_sl": 15000,
+              "ge_display": "or 290",
+              "ge_cost": 290
+            },
+            {
+              "mod_id": "cn_akd_9",
+              "name": "AKD-9",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 1,
+              "column": 3,
+              "research_display": "10,000",
+              "research_rp": 10000,
+              "purchase_display": "15,000",
+              "purchase_sl": 15000,
+              "ge_display": "or 290",
+              "ge_cost": 290
+            },
+            {
+              "mod_id": "MAW_system_heli_false_thermal_targets_large",
+              "name": "MAW",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_false_thermal_targets.png",
+              "tier": 1,
+              "column": 4,
+              "research_display": "10,000",
+              "research_rp": 10000,
+              "purchase_display": "15,000",
+              "purchase_sl": 15000,
+              "ge_display": "or 290",
+              "ge_cost": 290
+            },
+            {
+              "mod_id": "type_23l_new_gun",
+              "name": "New 23 mm cannons",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 500",
+              "ge_cost": 500
+            },
+            {
+              "mod_id": "cn_akd_10",
+              "name": "AKD-10",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 2,
+              "column": 3,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 500",
+              "ge_cost": 500
+            },
+            {
+              "mod_id": "automatic_air_extinguisher",
+              "name": "EFS(a)",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine_extinguisher.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 440",
+              "ge_cost": 440
+            },
+            {
+              "mod_id": "qjk_99_belt_pack",
+              "name": "Offensive 12.7 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 440",
+              "ge_cost": 440
+            },
+            {
+              "mod_id": "cn_cm_502kg",
+              "name": "CM-502KG",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 3,
+              "column": 3,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 440",
+              "ge_cost": 440
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 3,
+              "column": 4,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 440",
+              "ge_cost": 440
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 730",
+              "ge_cost": 730
+            },
+            {
+              "mod_id": "qjk_99_new_gun",
+              "name": "New 12.7 mm MGs",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 730",
+              "ge_cost": 730
+            },
+            {
+              "mod_id": "cn_ba_11",
+              "name": "BA-11A",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 4,
+              "column": 3,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 730",
+              "ge_cost": 730
+            },
+            {
+              "mod_id": "cn_ty_90",
+              "name": "TY-90",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 4,
+              "column": 4,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 730",
+              "ge_cost": 730
+            }
+          ]
+        }
+      ],
+      "mod_count": 19,
+      "total_research_rp": 303000,
+      "total_purchase_sl": 448000
+    },
+    "z_11wa": {
+      "vehicle": "Z-11WA",
+      "source_url": "https://wiki.warthunder.com/unit/z_11wa",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "5,700",
+              "research_rp": 5700,
+              "purchase_display": "11,000",
+              "purchase_sl": 11000,
+              "ge_display": "or 195",
+              "ge_cost": 195
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "24,000",
+              "purchase_sl": 24000,
+              "ge_display": "or 450",
+              "ge_cost": 450
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "5,700",
+              "research_rp": 5700,
+              "purchase_display": "11,000",
+              "purchase_sl": 11000,
+              "ge_display": "or 195",
+              "ge_cost": 195
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "5,700",
+              "research_rp": 5700,
+              "purchase_display": "11,000",
+              "purchase_sl": 11000,
+              "ge_display": "or 195",
+              "ge_cost": 195
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "13,000",
+              "research_rp": 13000,
+              "purchase_display": "24,000",
+              "purchase_sl": 24000,
+              "ge_display": "or 450",
+              "ge_cost": 450
+            },
+            {
+              "mod_id": "air_extinguisher",
+              "name": "EFS",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine_extinguisher.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "5,700",
+              "research_rp": 5700,
+              "purchase_display": "11,000",
+              "purchase_sl": 11000,
+              "ge_display": "or 195",
+              "ge_cost": 195
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "37,000",
+              "research_rp": 37000,
+              "purchase_display": "68,000",
+              "purchase_sl": 68000,
+              "ge_display": "or 1,300",
+              "ge_cost": 1300
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "qjk_99_belt_pack",
+              "name": "Offensive 12.7 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "5,700",
+              "research_rp": 5700,
+              "purchase_display": "11,000",
+              "purchase_sl": 11000,
+              "ge_display": "or 195",
+              "ge_cost": 195
+            },
+            {
+              "mod_id": "cn_hf7d",
+              "name": "HF-7D",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "5,700",
+              "research_rp": 5700,
+              "purchase_display": "11,000",
+              "purchase_sl": 11000,
+              "ge_display": "or 195",
+              "ge_cost": 195
+            },
+            {
+              "mod_id": "qjk_99_new_gun",
+              "name": "New 12.7 mm MGs",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "5,700",
+              "research_rp": 5700,
+              "purchase_display": "11,000",
+              "purchase_sl": 11000,
+              "ge_display": "or 195",
+              "ge_cost": 195
+            },
+            {
+              "mod_id": "cn_hj8_c",
+              "name": "HJ-8C",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "5,700",
+              "research_rp": 5700,
+              "purchase_display": "11,000",
+              "purchase_sl": 11000,
+              "ge_display": "or 195",
+              "ge_cost": 195
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 3,
+              "column": 3,
+              "research_display": "5,700",
+              "research_rp": 5700,
+              "purchase_display": "11,000",
+              "purchase_sl": 11000,
+              "ge_display": "or 195",
+              "ge_cost": 195
+            }
+          ]
+        }
+      ],
+      "mod_count": 12,
+      "total_research_rp": 114300,
+      "total_purchase_sl": 215000
+    },
+    "z_19": {
+      "vehicle": "Z-19",
+      "source_url": "https://wiki.warthunder.com/unit/z_19",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 280",
+              "ge_cost": 280
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "22,000",
+              "research_rp": 22000,
+              "purchase_display": "32,000",
+              "purchase_sl": 32000,
+              "ge_display": "or 410",
+              "ge_cost": 410
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 460",
+              "ge_cost": 460
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 280",
+              "ge_cost": 280
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "22,000",
+              "research_rp": 22000,
+              "purchase_display": "32,000",
+              "purchase_sl": 32000,
+              "ge_display": "or 410",
+              "ge_cost": 410
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "32,000",
+              "research_rp": 32000,
+              "purchase_display": "47,000",
+              "purchase_sl": 47000,
+              "ge_display": "or 600",
+              "ge_cost": 600
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "cn_hf7d",
+              "name": "HF-7D",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 280",
+              "ge_cost": 280
+            },
+            {
+              "mod_id": "MAW_system_heli_false_thermal_targets_large",
+              "name": "MAW",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_false_thermal_targets.png",
+              "tier": 1,
+              "column": 3,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 280",
+              "ge_cost": 280
+            },
+            {
+              "mod_id": "qjk_99_belt_pack",
+              "name": "Offensive 12.7 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "22,000",
+              "research_rp": 22000,
+              "purchase_display": "32,000",
+              "purchase_sl": 32000,
+              "ge_display": "or 410",
+              "ge_cost": 410
+            },
+            {
+              "mod_id": "cn_akd_9",
+              "name": "AKD-9",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 460",
+              "ge_cost": 460
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 3,
+              "column": 3,
+              "research_display": "25,000",
+              "research_rp": 25000,
+              "purchase_display": "37,000",
+              "purchase_sl": 37000,
+              "ge_display": "or 460",
+              "ge_cost": 460
+            },
+            {
+              "mod_id": "qjk_99_new_gun",
+              "name": "New 12.7 mm MGs",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "32,000",
+              "research_rp": 32000,
+              "purchase_display": "47,000",
+              "purchase_sl": 47000,
+              "ge_display": "or 600",
+              "ge_cost": 600
+            },
+            {
+              "mod_id": "cn_ty_90",
+              "name": "TY-90",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": "32,000",
+              "research_rp": 32000,
+              "purchase_display": "47,000",
+              "purchase_sl": 47000,
+              "ge_display": "or 600",
+              "ge_cost": 600
+            }
+          ]
+        }
+      ],
+      "mod_count": 13,
+      "total_research_rp": 297000,
+      "total_purchase_sl": 436000
+    },
+    "z_19e": {
+      "vehicle": "Z-19E",
+      "source_url": "https://wiki.warthunder.com/unit/z_19e",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "cn_hf7d",
+              "name": "HF-7D",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "MAW_system_heli_false_thermal_targets_large",
+              "name": "MAW",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_false_thermal_targets.png",
+              "tier": 1,
+              "column": 3,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "qjk_99_belt_pack",
+              "name": "Offensive 12.7 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "cn_ba_9",
+              "name": "BA-9",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 3,
+              "column": 3,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "qjk_99_new_gun",
+              "name": "New 12.7 mm MGs",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            },
+            {
+              "mod_id": "cn_ty_90",
+              "name": "TY-90",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": null,
+              "research_rp": null,
+              "purchase_display": null,
+              "purchase_sl": null,
+              "ge_display": null,
+              "ge_cost": null
+            }
+          ]
+        }
+      ],
+      "mod_count": 13,
+      "total_research_rp": 0,
+      "total_purchase_sl": 0
+    },
+    "z_9w": {
+      "vehicle": "Z-9W",
+      "source_url": "https://wiki.warthunder.com/unit/z_9w",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "14,000",
+              "research_rp": 14000,
+              "purchase_display": "21,000",
+              "purchase_sl": 21000,
+              "ge_display": "or 280",
+              "ge_cost": 280
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "16,000",
+              "research_rp": 16000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 320",
+              "ge_cost": 320
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "23,000",
+              "research_rp": 23000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 460",
+              "ge_cost": 460
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "14,000",
+              "research_rp": 14000,
+              "purchase_display": "21,000",
+              "purchase_sl": 21000,
+              "ge_display": "or 280",
+              "ge_cost": 280
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "16,000",
+              "research_rp": 16000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 320",
+              "ge_cost": 320
+            },
+            {
+              "mod_id": "air_extinguisher",
+              "name": "EFS",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine_extinguisher.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "23,000",
+              "research_rp": 23000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 460",
+              "ge_cost": 460
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "23,000",
+              "research_rp": 23000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 460",
+              "ge_cost": 460
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "qjk_99_belt_pack",
+              "name": "Offensive 12.7 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "14,000",
+              "research_rp": 14000,
+              "purchase_display": "21,000",
+              "purchase_sl": 21000,
+              "ge_display": "or 280",
+              "ge_cost": 280
+            },
+            {
+              "mod_id": "cn_q5_hf6",
+              "name": "HF-6",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "14,000",
+              "research_rp": 14000,
+              "purchase_display": "21,000",
+              "purchase_sl": 21000,
+              "ge_display": "or 280",
+              "ge_cost": 280
+            },
+            {
+              "mod_id": "qjk_99_new_gun",
+              "name": "New 12.7 mm MGs",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "16,000",
+              "research_rp": 16000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 320",
+              "ge_cost": 320
+            },
+            {
+              "mod_id": "cn_hj8_c",
+              "name": "HJ-8C",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 2,
+              "column": 3,
+              "research_display": "16,000",
+              "research_rp": 16000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 320",
+              "ge_cost": 320
+            },
+            {
+              "mod_id": "ns23_belt_pack",
+              "name": "Offensive 23 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "23,000",
+              "research_rp": 23000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 460",
+              "ge_cost": 460
+            },
+            {
+              "mod_id": "ns23_new_gun",
+              "name": "New 23 mm cannons",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "23,000",
+              "research_rp": 23000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 460",
+              "ge_cost": 460
+            },
+            {
+              "mod_id": "cn_ty_90",
+              "name": "TY-90",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": "23,000",
+              "research_rp": 23000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 460",
+              "ge_cost": 460
+            },
+            {
+              "mod_id": "cn_hj8_e",
+              "name": "HJ-8E",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 4,
+              "column": 3,
+              "research_display": "23,000",
+              "research_rp": 23000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 460",
+              "ge_cost": 460
+            }
+          ]
+        }
+      ],
+      "mod_count": 15,
+      "total_research_rp": 281000,
+      "total_purchase_sl": 429000
+    },
+    "z_9wa": {
+      "vehicle": "Z-9WA",
+      "source_url": "https://wiki.warthunder.com/unit/z_9wa",
+      "categories": [
+        {
+          "name": "Flight performance",
+          "mods": [
+            {
+              "mod_id": "new_compressor_heli",
+              "name": "Compressor",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_compressor.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "cd_98_main_rotor",
+              "name": "Replacing helicopter blades",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/cd_98_main_rotor.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 420",
+              "ge_cost": 420
+            },
+            {
+              "mod_id": "hp_105_jet",
+              "name": "Engine",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            }
+          ]
+        },
+        {
+          "name": "Survivability",
+          "mods": [
+            {
+              "mod_id": "heli_flak_jacket",
+              "name": "Flak jacket",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_flak_jacket.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "heli_structure",
+              "name": "Helicopter frame",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_structure.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 420",
+              "ge_cost": 420
+            },
+            {
+              "mod_id": "air_extinguisher",
+              "name": "EFS",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/jet_engine_extinguisher.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "new_heli_cover",
+              "name": "Cover",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/armor_cover.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "24,000",
+              "research_rp": 24000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 600",
+              "ge_cost": 600
+            }
+          ]
+        },
+        {
+          "name": "Weaponry",
+          "mods": [
+            {
+              "mod_id": "qjk_99_belt_pack",
+              "name": "Offensive 12.7 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 1,
+              "column": 1,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "cn_q5_hf6",
+              "name": "HF-6",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/pilon_block_rocket.png",
+              "tier": 1,
+              "column": 2,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "countermeasures_belt_pack",
+              "name": "Flares/Chaff",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/heli_false_thermal_targets.png",
+              "tier": 1,
+              "column": 3,
+              "research_display": "12,000",
+              "research_rp": 12000,
+              "purchase_display": "18,000",
+              "purchase_sl": 18000,
+              "ge_display": "or 300",
+              "ge_cost": 300
+            },
+            {
+              "mod_id": "qjk_99_new_gun",
+              "name": "New 12.7 mm MGs",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 2,
+              "column": 1,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 420",
+              "ge_cost": 420
+            },
+            {
+              "mod_id": "cn_hj8_e",
+              "name": "HJ-8E",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 2,
+              "column": 2,
+              "research_display": "17,000",
+              "research_rp": 17000,
+              "purchase_display": "25,000",
+              "purchase_sl": 25000,
+              "ge_display": "or 420",
+              "ge_cost": 420
+            },
+            {
+              "mod_id": "ns23_belt_pack",
+              "name": "Offensive 23 mm belts",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/ammo.png",
+              "tier": 3,
+              "column": 1,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "cn_hj8_h",
+              "name": "HJ-8H",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 3,
+              "column": 2,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "heli_night_vision_system",
+              "name": "NVD",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/thermal_sight.png",
+              "tier": 3,
+              "column": 3,
+              "research_display": "15,000",
+              "research_rp": 15000,
+              "purchase_display": "22,000",
+              "purchase_sl": 22000,
+              "ge_display": "or 370",
+              "ge_cost": 370
+            },
+            {
+              "mod_id": "ns23_new_gun",
+              "name": "New 23 mm cannons",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/weapon.png",
+              "tier": 4,
+              "column": 1,
+              "research_display": "24,000",
+              "research_rp": 24000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 600",
+              "ge_cost": 600
+            },
+            {
+              "mod_id": "cn_akd_9",
+              "name": "AKD-9",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/atgm_heli_preset.png",
+              "tier": 4,
+              "column": 2,
+              "research_display": "24,000",
+              "research_rp": 24000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 600",
+              "ge_cost": 600
+            },
+            {
+              "mod_id": "cn_ty_90",
+              "name": "TY-90",
+              "icon_url": "https://static.encyclopedia.warthunder.com/gui_skin/air_to_air_missile.png",
+              "tier": 4,
+              "column": 3,
+              "research_display": "24,000",
+              "research_rp": 24000,
+              "purchase_display": "35,000",
+              "purchase_sl": 35000,
+              "ge_display": "or 600",
+              "ge_cost": 600
+            }
+          ]
+        }
+      ],
+      "mod_count": 18,
+      "total_research_rp": 299000,
+      "total_purchase_sl": 440000
+    }
+  }
+}

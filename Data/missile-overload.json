@@ -1,0 +1,109 @@
+{
+  "source": "https://github.com/gszabi99/War-Thunder-Datamine",
+  "branch": "master",
+  "field": "reqAccelMax",
+  "unit": "G",
+  "note": "社区解包数据：官网（游戏数据卡）不给驾束/半自动指令制导导弹显示最大过载，这份数值取自解包文件里的 reqAccelMax，与官网对自带导引头导弹显示的口径一致（官网取整）。",
+  "generated_at": "2026-09-16T04:52:24.581Z",
+  "round_count": 16,
+  "rounds": {
+    "95Ya6": {
+      "overload_g": 32,
+      "datamine_name": "170mm_zur_95ya6",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/170mm_57e6m_launcher_user_cannon.blkx"
+    },
+    "95Ya6M": {
+      "overload_g": 50,
+      "datamine_name": "170mm_57e6m",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/170mm_57e6m_launcher_user_cannon.blkx"
+    },
+    "9M311": {
+      "overload_g": 32,
+      "datamine_name": "152mm_zur_9m311",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/152mm_9m311_rocket_launcher.blkx"
+    },
+    "9M331": {
+      "overload_g": 42,
+      "datamine_name": "239mm_9m331",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/239mm_9m331_user_cannon.blkx"
+    },
+    "9M33M3": {
+      "overload_g": 23.9,
+      "datamine_name": "209mm_9m33m3",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/209mm_9m33a3_launcher_user_cannon.blkx"
+    },
+    "BOLIDE": {
+      "overload_g": 25,
+      "datamine_name": "105mm_bolide",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/105mm_rbs_70_asrad_launcher_user_cannon.blkx"
+    },
+    "HQ17": {
+      "overload_g": 42,
+      "datamine_name": "239mm_hq17",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/239mm_hq_17_user_cannon.blkx"
+    },
+    "MIM-146": {
+      "overload_g": 42,
+      "datamine_name": "152mm_mim146",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/152mm_mim146_launcher_user_cannon.blkx"
+    },
+    "Rapier Mk.1E": {
+      "overload_g": 22.5,
+      "datamine_name": "130mm_rapier_mk1e",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/130mm_rapier_launcher_user_cannon.blkx"
+    },
+    "Rapier Mk.2": {
+      "overload_g": 35,
+      "datamine_name": "130mm_rapier_mk2",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/130mm_rapier_launcher_user_cannon.blkx"
+    },
+    "RB 70": {
+      "overload_g": 15,
+      "datamine_name": "105mm_rb_70",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/105mm_rbs_70_launcher_user_cannon.blkx"
+    },
+    "RB 70 Mk.2": {
+      "overload_g": 15,
+      "datamine_name": "105mm_rb_70_2",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/105mm_rbs_70_asrad_launcher_user_cannon.blkx"
+    },
+    "Roland 3": {
+      "overload_g": 20,
+      "datamine_name": "163mm_roland_3",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/163mm_roland_2_launcher_user_cannon.blkx"
+    },
+    "Starstreak HVM": {
+      "overload_g": 47,
+      "datamine_name": "130mm_starstreak_hvm",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/130mm_starstreak_hvm_rocket_launcher.blkx"
+    },
+    "TKB-1055": {
+      "overload_g": 40,
+      "datamine_name": "170mm_tkb_1055",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/170mm_57e6m_launcher_user_cannon.blkx"
+    },
+    "VT1": {
+      "overload_g": 50,
+      "datamine_name": "165mm_vt_1",
+      "source_file": "aces.vromfs.bin_u/gamedata/weapons/groundmodels_weapons/163mm_roland_vt_1_launcher_user_cannon.blkx"
+    }
+  },
+  "reference_checks": [
+    {
+      "name": "AIM-9M",
+      "overload_g": 30
+    },
+    {
+      "name": "R-73",
+      "overload_g": 40
+    },
+    {
+      "name": "AIM-120C-7",
+      "overload_g": 35
+    },
+    {
+      "name": "FIM-92",
+      "overload_g": 13
+    }
+  ]
+}
