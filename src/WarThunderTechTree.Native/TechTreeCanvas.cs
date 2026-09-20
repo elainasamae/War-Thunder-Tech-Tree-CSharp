@@ -21,6 +21,8 @@ internal sealed class TechTreeCanvas : ScrollableControl
     private readonly ToolTip _toolTip = new() { InitialDelay = 350, ReshowDelay = 100, AutoPopDelay = 8000 };
     private TreeData? _tree;
     private string? _lastTooltipId;
+    private int _lastLayoutWidth = -1;
+    private bool _buildingLayout;
     private float ScaleFactor => DeviceDpi / 96f;
 
     public string Mode { get; set; } = "rb";
@@ -76,89 +78,122 @@ internal sealed class TechTreeCanvas : ScrollableControl
         BuildLayout();
     }
 
+    protected override void OnClientSizeChanged(EventArgs e)
+    {
+        base.OnClientSizeChanged(e);
+        if (_tree is null || _buildingLayout || ClientSize.Width == _lastLayoutWidth) return;
+
+        var verticalOffset = -AutoScrollPosition.Y;
+        BuildLayout();
+        AutoScrollPosition = new Point(0, verticalOffset);
+        Invalidate();
+    }
+
     private int S(float value) => Math.Max(1, (int)Math.Round(value * ScaleFactor));
 
     private void BuildLayout()
     {
-        _cards.Clear();
-        _ranks.Clear();
-        _nodes.Clear();
-        if (_tree is null)
+        if (_buildingLayout) return;
+        _buildingLayout = true;
+        try
         {
-            AutoScrollMinSize = Size.Empty;
-            return;
-        }
-
-        var margin = S(24);
-        var header = S(54);
-        var cardWidth = S(184);
-        var cardHeight = S(72);
-        var xGap = S(14);
-        var yGap = S(12);
-        var divider = S(34);
-        var researchColumns = _tree.VehicleType == "helicopter" ? 3 : 5;
-        var premiumStart = margin + researchColumns * (cardWidth + xGap) + divider;
-        var totalWidth = premiumStart + 2 * (cardWidth + xGap) + margin;
-        var currentY = margin;
-
-        foreach (var rankGroup in _tree.Vehicles.GroupBy(vehicle => vehicle.RankNumber).OrderBy(group => group.Key))
-        {
-            var slots = rankGroup
-                .GroupBy(vehicle => string.IsNullOrWhiteSpace(vehicle.GroupId) ? $"unit:{vehicle.UnitId}" : $"group:{vehicle.GroupId}")
-                .Select(group => group.OrderBy(vehicle => vehicle.GroupPosition ?? int.MaxValue).ThenBy(vehicle => vehicle.TreeOrder).ToList())
-                .ToList();
-            var effectiveRows = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
-            foreach (var lane in slots.GroupBy(members =>
-                         (members[0].TreeSection, Column: Math.Max(1, members[0].TreeColumn ?? 1))))
+            _lastLayoutWidth = ClientSize.Width;
+            _cards.Clear();
+            _ranks.Clear();
+            _nodes.Clear();
+            if (_tree is null)
             {
-                var expandedRowsAbove = 0;
-                foreach (var members in lane
-                             .OrderBy(items => Math.Max(1, items[0].TreeRow ?? 1))
-                             .ThenBy(items => items[0].TreeOrder))
+                AutoScrollMinSize = Size.Empty;
+                return;
+            }
+
+            var margin = S(24);
+            var header = S(54);
+            var cardWidth = S(184);
+            var cardHeight = S(72);
+            var minimumGap = S(14);
+            var yGap = S(12);
+            var divider = S(34);
+            var researchColumns = _tree.VehicleType == "helicopter" ? 3 : 5;
+            const int premiumColumns = 2;
+            var totalColumns = researchColumns + premiumColumns;
+            var minimumWidth = margin * 2 + totalColumns * cardWidth + (totalColumns - 1) * minimumGap + divider;
+            var viewportWidth = Math.Max(1, ClientSize.Width - SystemInformation.VerticalScrollBarWidth);
+            var totalWidth = Math.Max(minimumWidth, viewportWidth);
+            var columnGap = Math.Max(minimumGap,
+                (totalWidth - margin * 2 - totalColumns * cardWidth - divider) / (double)(totalColumns - 1));
+            var currentY = margin;
+
+            int ColumnX(int zeroBasedColumn)
+            {
+                var dividerOffset = zeroBasedColumn >= researchColumns ? divider : 0;
+                return margin + (int)Math.Round(zeroBasedColumn * (cardWidth + columnGap)) + dividerOffset;
+            }
+
+            foreach (var rankGroup in _tree.Vehicles.GroupBy(vehicle => vehicle.RankNumber).OrderBy(group => group.Key))
+            {
+                var slots = rankGroup
+                    .GroupBy(vehicle => string.IsNullOrWhiteSpace(vehicle.GroupId) ? $"unit:{vehicle.UnitId}" : $"group:{vehicle.GroupId}")
+                    .Select(group => group.OrderBy(vehicle => vehicle.GroupPosition ?? int.MaxValue).ThenBy(vehicle => vehicle.TreeOrder).ToList())
+                    .ToList();
+                var effectiveRows = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+                foreach (var lane in slots.GroupBy(members =>
+                             (members[0].TreeSection, Column: Math.Max(1, members[0].TreeColumn ?? 1))))
+                {
+                    var expandedRowsAbove = 0;
+                    foreach (var members in lane
+                                 .OrderBy(items => Math.Max(1, items[0].TreeRow ?? 1))
+                                 .ThenBy(items => items[0].TreeOrder))
+                    {
+                        var first = members[0];
+                        effectiveRows[first.UnitId] = Math.Max(1, first.TreeRow ?? 1) + expandedRowsAbove;
+                        if (first.GroupId is not null && _expandedGroups.Contains(first.GroupId))
+                            expandedRowsAbove += members.Count - 1;
+                    }
+                }
+                var maxBottom = 1;
+                foreach (var members in slots)
                 {
                     var first = members[0];
-                    effectiveRows[first.UnitId] = Math.Max(1, first.TreeRow ?? 1) + expandedRowsAbove;
-                    if (first.GroupId is not null && _expandedGroups.Contains(first.GroupId))
-                        expandedRowsAbove += members.Count - 1;
+                    var row = effectiveRows[first.UnitId];
+                    var expanded = first.GroupId is not null && _expandedGroups.Contains(first.GroupId);
+                    maxBottom = Math.Max(maxBottom, row + (expanded ? members.Count - 1 : 0));
                 }
-            }
-            var maxBottom = 1;
-            foreach (var members in slots)
-            {
-                var first = members[0];
-                var row = effectiveRows[first.UnitId];
-                var expanded = first.GroupId is not null && _expandedGroups.Contains(first.GroupId);
-                maxBottom = Math.Max(maxBottom, row + (expanded ? members.Count - 1 : 0));
-            }
-            var bandHeight = header + maxBottom * (cardHeight + yGap) + S(22);
-            var rankRect = new Rectangle(margin, currentY, totalWidth - margin * 2, bandHeight);
-            _ranks.Add(new RankLayout(rankGroup.First().Rank, rankGroup.Key, rankRect, ResearchPlanner.UnlockRequirement(_tree.VehicleType, rankGroup.Key)));
+                var bandHeight = header + maxBottom * (cardHeight + yGap) + S(22);
+                var rankRect = new Rectangle(margin, currentY, totalWidth - margin * 2, bandHeight);
+                _ranks.Add(new RankLayout(rankGroup.First().Rank, rankGroup.Key, rankRect, ResearchPlanner.UnlockRequirement(_tree.VehicleType, rankGroup.Key)));
 
-            foreach (var members in slots)
-            {
-                var first = members[0];
-                var column = Math.Max(1, first.TreeColumn ?? 1);
-                var row = effectiveRows[first.UnitId];
-                var x = first.TreeSection == "premium"
-                    ? premiumStart + (column - 1) * (cardWidth + xGap)
-                    : margin + (column - 1) * (cardWidth + xGap);
-                var y = currentY + header + (row - 1) * (cardHeight + yGap);
-                var expanded = first.GroupId is not null && _expandedGroups.Contains(first.GroupId);
-                var shown = expanded ? members : [first];
-                for (var index = 0; index < shown.Count; index++)
+                foreach (var members in slots)
                 {
-                    var vehicle = shown[index];
-                    var rect = new Rectangle(x, y + index * (cardHeight + yGap), cardWidth, cardHeight);
-                    _cards.Add(new CardLayout(vehicle, rect, first.GroupId, members.Count));
-                    _nodes[vehicle.UnitId] = rect;
+                    var first = members[0];
+                    var sourceColumn = Math.Max(1, first.TreeColumn ?? 1);
+                    var layoutColumn = first.TreeSection == "premium"
+                        ? researchColumns + sourceColumn - 1
+                        : sourceColumn - 1;
+                    var x = ColumnX(Math.Clamp(layoutColumn, 0, totalColumns - 1));
+                    var row = effectiveRows[first.UnitId];
+                    var y = currentY + header + (row - 1) * (cardHeight + yGap);
+                    var expanded = first.GroupId is not null && _expandedGroups.Contains(first.GroupId);
+                    var shown = expanded ? members : [first];
+                    for (var index = 0; index < shown.Count; index++)
+                    {
+                        var vehicle = shown[index];
+                        var rect = new Rectangle(x, y + index * (cardHeight + yGap), cardWidth, cardHeight);
+                        _cards.Add(new CardLayout(vehicle, rect, first.GroupId, members.Count));
+                        _nodes[vehicle.UnitId] = rect;
+                    }
+                    var slotRect = new Rectangle(x, y, cardWidth, expanded ? members.Count * (cardHeight + yGap) - yGap : cardHeight);
+                    foreach (var member in members) _nodes.TryAdd(member.UnitId, slotRect);
+                    if (first.GroupId is not null) _nodes[first.GroupId] = slotRect;
                 }
-                var slotRect = new Rectangle(x, y, cardWidth, expanded ? members.Count * (cardHeight + yGap) - yGap : cardHeight);
-                foreach (var member in members) _nodes.TryAdd(member.UnitId, slotRect);
-                if (first.GroupId is not null) _nodes[first.GroupId] = slotRect;
+                currentY += bandHeight + S(18);
             }
-            currentY += bandHeight + S(18);
+            AutoScrollMinSize = new Size(totalWidth, currentY + margin);
         }
-        AutoScrollMinSize = new Size(totalWidth, currentY + margin);
+        finally
+        {
+            _buildingLayout = false;
+        }
     }
 
     protected override void OnPaint(PaintEventArgs e)
