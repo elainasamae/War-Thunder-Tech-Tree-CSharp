@@ -297,9 +297,8 @@ internal sealed class JsonDetailForm : Form
 
     private Control BuildLoadouts(JsonElement data)
     {
-        var root = new TableLayoutPanel { Dock = DockStyle.Fill, BackColor = WindowBack, ColumnCount = 1, RowCount = 4 };
+        var root = new TableLayoutPanel { Dock = DockStyle.Fill, BackColor = WindowBack, ColumnCount = 1, RowCount = 3 };
         root.RowStyles.Add(new RowStyle(SizeType.Absolute, 36));
-        root.RowStyles.Add(new RowStyle(SizeType.Absolute, 47));
         root.RowStyles.Add(new RowStyle(SizeType.Absolute, 34));
         root.RowStyles.Add(new RowStyle(SizeType.Percent, 100));
         var limits = SectionLabel($"单侧机翼上限：{String(data, "wing_load_maximum") ?? "无数据"}      左右最大差值：{String(data, "maximum_imbalance") ?? "无数据"}", Muted);
@@ -310,126 +309,276 @@ internal sealed class JsonDetailForm : Form
             ? weaponArray.EnumerateArray().Select((weapon, index) => new WeaponItem(index, weapon.Clone())).ToList()
             : [];
         var slots = weapons.SelectMany(item => IntArray(item.Weapon, "available_slots")).Distinct().OrderBy(value => value).ToArray();
-        var slotBar = new FlowLayoutPanel { Dock = DockStyle.Fill, Padding = new Padding(8, 6, 8, 4), BackColor = CardBack, WrapContents = false };
-        root.Controls.Add(slotBar, 0, 1);
-        var status = SectionLabel("点击挂点查看可安装的武器和设备", Muted);
+        var status = SectionLabel("点击弹药名称或挂点图标查看详细参数；点击表格空白关闭卡片", Muted);
         status.Dock = DockStyle.Fill;
-        root.Controls.Add(status, 0, 2);
-        var split = new SplitContainer { Dock = DockStyle.Fill, BackColor = Line };
-        split.SizeChanged += (_, _) =>
-        {
-            if (split.ClientSize.Width > 600)
-                split.SplitterDistance = Math.Clamp((int)(split.ClientSize.Width * 0.54), 260, split.ClientSize.Width - 260);
-        };
-        root.Controls.Add(split, 0, 3);
-        var list = new ListBox
+        root.Controls.Add(status, 0, 1);
+
+        var host = new Panel { Dock = DockStyle.Fill, BackColor = Color.White };
+        root.Controls.Add(host, 0, 2);
+        var grid = new DataGridView
         {
             Dock = DockStyle.Fill,
-            BackColor = CardBack,
-            ForeColor = Color.White,
+            ReadOnly = true,
+            AllowUserToAddRows = false,
+            AllowUserToDeleteRows = false,
+            AllowUserToResizeRows = false,
+            AllowUserToResizeColumns = false,
+            RowHeadersVisible = false,
             BorderStyle = BorderStyle.None,
-            IntegralHeight = false,
-            DrawMode = DrawMode.OwnerDrawFixed,
-            ItemHeight = 64,
-            Font = new Font(Font.FontFamily, 9.3f)
+            BackgroundColor = Color.White,
+            GridColor = Color.FromArgb(218, 222, 226),
+            EnableHeadersVisualStyles = false,
+            ColumnHeadersHeight = 38,
+            RowTemplate = { Height = 54 },
+            AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None,
+            ScrollBars = ScrollBars.Both,
+            MultiSelect = false,
+            SelectionMode = DataGridViewSelectionMode.CellSelect,
+            Font = new Font("Microsoft YaHei UI", 9f),
+            AccessibleName = "挂载点兼容表"
         };
-        list.DrawItem += (_, e) =>
+        grid.ColumnHeadersDefaultCellStyle = new DataGridViewCellStyle
         {
-            if (e.Index < 0 || e.Index >= list.Items.Count) return;
-            var item = (WeaponItem)list.Items[e.Index];
-            var selected = (e.State & DrawItemState.Selected) != 0;
-            var cardRect = Rectangle.Inflate(e.Bounds, -4, -3);
-            using var background = new SolidBrush(selected ? CardBackAlt : CardBack);
-            using var border = new Pen(selected ? Accent : Line);
-            using var titleBrush = new SolidBrush(Color.White);
-            using var detailBrush = new SolidBrush(Muted);
-            using var titleFont = new Font(list.Font, FontStyle.Bold);
-            e.Graphics.FillRectangle(background, cardRect);
-            e.Graphics.DrawRectangle(border, cardRect);
-
-            var iconRect = new Rectangle(cardRect.X + 7, cardRect.Y + 7, 44, 44);
-            DrawWeaponIcon(e.Graphics, iconRect, item.Weapon);
-            var textX = iconRect.Right + 8;
-            e.Graphics.DrawString(String(item.Weapon, "name") ?? "挂载", titleFont, titleBrush,
-                new RectangleF(textX, cardRect.Y + 7, cardRect.Right - textX - 7, 20));
-            var slotsText = string.Join("/", IntArray(item.Weapon, "available_slots"));
-            e.Graphics.DrawString($"{String(item.Weapon, "weight") ?? "无重量数据"} · {(slotsText.Length > 0 ? $"挂点 {slotsText}" : "预设挂载")}",
-                list.Font, detailBrush, new RectangleF(textX, cardRect.Y + 33, cardRect.Right - textX - 7, 19));
+            BackColor = Color.FromArgb(247, 248, 249),
+            ForeColor = Color.FromArgb(35, 39, 42),
+            Alignment = DataGridViewContentAlignment.MiddleCenter,
+            Font = new Font("Microsoft YaHei UI", 9f, FontStyle.Bold),
+            SelectionBackColor = Color.FromArgb(247, 248, 249),
+            SelectionForeColor = Color.FromArgb(35, 39, 42)
         };
-        split.Panel1.Controls.Add(list);
-        var detailHost = new Panel { Dock = DockStyle.Fill, AutoScroll = true, BackColor = WindowBack, Padding = new Padding(10) };
-        split.Panel2.Controls.Add(detailHost);
-        int? selectedSlot = null;
-
-        void ShowDetail(WeaponItem? item)
+        grid.DefaultCellStyle = new DataGridViewCellStyle
         {
-            detailHost.Controls.Clear();
-            detailHost.Controls.Add(item is null ? EmptyLabel("点击左侧具体武器或弹药查看参数") : BuildWeaponDetails(item.Weapon));
-        }
-        void Filter()
+            BackColor = Color.White,
+            ForeColor = Color.FromArgb(37, 40, 43),
+            Alignment = DataGridViewContentAlignment.MiddleCenter,
+            SelectionBackColor = Color.FromArgb(238, 246, 252),
+            SelectionForeColor = Color.FromArgb(24, 32, 38)
+        };
+        grid.Columns.Add(new DataGridViewTextBoxColumn
         {
-            var visible = selectedSlot is null ? weapons : weapons.Where(item => IntArray(item.Weapon, "available_slots").Contains(selectedSlot.Value)).ToList();
-            list.Items.Clear();
-            list.Items.AddRange(visible.Cast<object>().ToArray());
-            status.Text = selectedSlot is null ? "点击挂点查看可安装的武器和设备" : $"挂点 {selectedSlot} · 可安装 {visible.Count} 种挂载";
-            ShowDetail(null);
-        }
+            Name = "weapon",
+            HeaderText = "挂载武器",
+            Width = 315,
+            Frozen = true,
+            SortMode = DataGridViewColumnSortMode.NotSortable
+        });
+        grid.Columns.Add(new DataGridViewTextBoxColumn
+        {
+            Name = "weight",
+            HeaderText = "重量",
+            Width = 95,
+            Frozen = true,
+            SortMode = DataGridViewColumnSortMode.NotSortable
+        });
         foreach (var slot in slots)
         {
-            var button = new Button { Text = slot.ToString(), Width = 45, Height = 29, FlatStyle = FlatStyle.Flat, ForeColor = Value, BackColor = CardBackAlt, Tag = slot };
-            button.FlatAppearance.BorderColor = Line;
-            button.Click += (_, _) =>
+            grid.Columns.Add(new DataGridViewTextBoxColumn
             {
-                selectedSlot = selectedSlot == slot ? null : slot;
-                foreach (Button item in slotBar.Controls) item.BackColor = selectedSlot == (int)item.Tag! ? Color.FromArgb(45, 145, 177) : CardBackAlt;
-                Filter();
-            };
-            slotBar.Controls.Add(button);
+                Name = $"slot_{slot}",
+                HeaderText = slot.ToString(),
+                Width = 58,
+                SortMode = DataGridViewColumnSortMode.NotSortable,
+                Tag = slot
+            });
         }
-        list.SelectedIndexChanged += (_, _) => ShowDetail(list.SelectedItem as WeaponItem);
-        Filter();
+
+        foreach (var item in weapons)
+        {
+            var availableSlots = IntArray(item.Weapon, "available_slots").ToHashSet();
+            var values = new object?[2 + slots.Length];
+            values[0] = String(item.Weapon, "name") ?? "挂载";
+            values[1] = String(item.Weapon, "weight") ?? "—";
+            for (var index = 0; index < slots.Length; index++) values[index + 2] = availableSlots.Contains(slots[index]);
+            var rowIndex = grid.Rows.Add(values);
+            grid.Rows[rowIndex].Tag = item;
+        }
+
+        var linkFont = new Font(grid.Font, FontStyle.Underline);
+        grid.Disposed += (_, _) => linkFont.Dispose();
+        grid.CellPainting += (_, e) =>
+        {
+            if (e.Graphics is null || e.RowIndex < 0 || e.RowIndex >= grid.Rows.Count) return;
+            var item = grid.Rows[e.RowIndex].Tag as WeaponItem;
+            if (item is null) return;
+
+            if (e.ColumnIndex == 0)
+            {
+                e.Paint(e.ClipBounds, DataGridViewPaintParts.Background | DataGridViewPaintParts.Border | DataGridViewPaintParts.SelectionBackground);
+                var textBounds = Rectangle.Inflate(e.CellBounds, -12, -4);
+                TextRenderer.DrawText(e.Graphics, String(item.Weapon, "name") ?? "挂载", linkFont, textBounds,
+                    Color.FromArgb(31, 58, 78), TextFormatFlags.Left | TextFormatFlags.VerticalCenter | TextFormatFlags.EndEllipsis);
+                e.Handled = true;
+                return;
+            }
+
+            if (e.ColumnIndex >= 2)
+            {
+                e.Paint(e.ClipBounds, DataGridViewPaintParts.Background | DataGridViewPaintParts.Border | DataGridViewPaintParts.SelectionBackground);
+                if (e.Value is true)
+                {
+                    var iconBounds = Rectangle.Inflate(e.CellBounds, -9, -7);
+                    DrawWeaponIcon(e.Graphics, iconBounds, item.Weapon);
+                }
+                e.Handled = true;
+            }
+        };
+
+        Panel? popup = null;
+        void ClosePopup()
+        {
+            if (popup is null) return;
+            host.Controls.Remove(popup);
+            popup.Dispose();
+            popup = null;
+            grid.ClearSelection();
+        }
+        void ShowPopup(WeaponItem item, Rectangle cellBounds)
+        {
+            ClosePopup();
+            popup = BuildWeaponPopover(item.Weapon);
+            host.Controls.Add(popup);
+            popup.BringToFront();
+
+            var location = host.PointToClient(grid.PointToScreen(cellBounds.Location));
+            var x = Math.Clamp(location.X, 8, Math.Max(8, host.ClientSize.Width - popup.Width - 8));
+            var y = location.Y + cellBounds.Height + 4;
+            if (y + popup.Height > host.ClientSize.Height - 8) y = location.Y - popup.Height - 4;
+            y = Math.Clamp(y, 8, Math.Max(8, host.ClientSize.Height - popup.Height - 8));
+            popup.Location = new Point(x, y);
+        }
+
+        grid.CellMouseClick += (_, e) =>
+        {
+            if (e.Button != MouseButtons.Left || e.RowIndex < 0 || e.ColumnIndex < 0)
+            {
+                ClosePopup();
+                return;
+            }
+            var item = grid.Rows[e.RowIndex].Tag as WeaponItem;
+            var clickedName = e.ColumnIndex == 0;
+            var clickedIcon = e.ColumnIndex >= 2 && grid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value is true;
+            if (item is null || (!clickedName && !clickedIcon))
+            {
+                ClosePopup();
+                return;
+            }
+            ShowPopup(item, grid.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true));
+        };
+        grid.CellMouseMove += (_, e) =>
+        {
+            var clickable = e.RowIndex >= 0 && (e.ColumnIndex == 0 ||
+                e.ColumnIndex >= 2 && grid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value is true);
+            grid.Cursor = clickable ? Cursors.Hand : Cursors.Default;
+        };
+        grid.MouseLeave += (_, _) => grid.Cursor = Cursors.Default;
+        grid.Scroll += (_, _) => ClosePopup();
+        host.Resize += (_, _) => ClosePopup();
+        host.Controls.Add(grid);
+        grid.ClearSelection();
         return root;
     }
 
-    private Control BuildWeaponDetails(JsonElement weapon)
+    private Panel BuildWeaponPopover(JsonElement weapon)
     {
-        var rows = new List<DetailRow>
+        var rows = new List<(string Label, string Value)>
         {
-            new("挂载重量", String(weapon, "weight") ?? "无数据", Value),
-            new("可用挂点", string.Join("、", IntArray(weapon, "available_slots")), Accent)
+            ("挂载重量", String(weapon, "weight") ?? "无数据"),
+            ("可用挂点", string.Join("、", IntArray(weapon, "available_slots")) is var slots && slots.Length > 0 ? slots : "预设挂载")
         };
         if (Try(weapon, "parameters", out var parameters) && parameters.ValueKind == JsonValueKind.Array)
-            rows.AddRange(parameters.EnumerateArray().Select(parameter => new DetailRow(TranslateCharacteristic(String(parameter, "label") ?? "参数"), TranslateValue(String(parameter, "value") ?? "—"), Value)));
-        var panel = new Panel { Dock = DockStyle.Top, BackColor = WindowBack };
-        var table = CreateRows(rows);
-        var header = new Panel { Location = Point.Empty, Height = 68, BackColor = CardBack };
-        var icon = new Panel { Location = new Point(8, 8), Size = new Size(52, 52), BackColor = CardBackAlt };
-        icon.Paint += (_, e) => DrawWeaponIcon(e.Graphics, new Rectangle(4, 4, 44, 44), weapon);
+        {
+            rows.AddRange(parameters.EnumerateArray().Select(parameter => (
+                TranslateCharacteristic(String(parameter, "label") ?? "参数"),
+                TranslateValue(String(parameter, "value") ?? "—"))));
+        }
+
+        const int cardWidth = 360;
+        const int headerHeight = 82;
+        const int rowHeight = 31;
+        var cardHeight = Math.Clamp(headerHeight + rows.Count * rowHeight + 8, 170, 520);
+        var card = new Panel
+        {
+            Size = new Size(cardWidth, cardHeight),
+            BackColor = Color.White,
+            BorderStyle = BorderStyle.FixedSingle
+        };
+        card.Paint += (_, e) =>
+        {
+            using var pen = new Pen(Color.FromArgb(192, 197, 201));
+            e.Graphics.DrawLine(pen, 0, headerHeight - 1, card.ClientSize.Width, headerHeight - 1);
+        };
+
         var title = new Label
         {
-            Location = new Point(70, 8),
-            Height = 52,
-            AutoEllipsis = true,
+            Location = new Point(16, 10),
+            Size = new Size(cardWidth - 92, 62),
+            BackColor = Color.White,
+            ForeColor = Color.FromArgb(34, 38, 41),
+            Font = new Font("Microsoft YaHei UI", 11.5f, FontStyle.Bold),
             TextAlign = ContentAlignment.MiddleLeft,
-            Font = new Font(Font.FontFamily, 10.5f, FontStyle.Bold),
-            ForeColor = Color.White,
-            Text = String(weapon, "name") ?? "挂载详情",
-            BackColor = Color.Transparent
+            AutoEllipsis = true,
+            Text = String(weapon, "name") ?? "挂载详情"
         };
-        header.Controls.Add(icon);
-        header.Controls.Add(title);
-        table.Location = new Point(0, header.Height + 4);
-        table.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-        panel.Height = header.Height + 4 + table.Height;
-        panel.Resize += (_, _) =>
+        var icon = new Panel
         {
-            header.Width = panel.ClientSize.Width;
-            title.Width = Math.Max(40, header.ClientSize.Width - title.Left - 8);
-            table.Width = panel.ClientSize.Width;
+            Location = new Point(cardWidth - 70, 14),
+            Size = new Size(50, 50),
+            BackColor = Color.FromArgb(247, 249, 251),
+            BorderStyle = BorderStyle.FixedSingle
         };
-        panel.Controls.Add(table);
-        panel.Controls.Add(header);
-        return panel;
+        icon.Paint += (_, e) => DrawWeaponIcon(e.Graphics, new Rectangle(4, 4, 40, 40), weapon);
+        card.Controls.Add(icon);
+        card.Controls.Add(title);
+
+        var body = new Panel
+        {
+            Location = new Point(0, headerHeight),
+            Size = new Size(cardWidth - 2, cardHeight - headerHeight - 2),
+            AutoScroll = true,
+            BackColor = Color.White
+        };
+        var content = new Panel { Location = Point.Empty, Size = new Size(body.ClientSize.Width - 1, rows.Count * rowHeight) };
+        for (var index = 0; index < rows.Count; index++)
+        {
+            var row = rows[index];
+            var rowPanel = new Panel
+            {
+                Location = new Point(0, index * rowHeight),
+                Size = new Size(content.Width, rowHeight),
+                BackColor = Color.White,
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right
+            };
+            rowPanel.Paint += (_, e) =>
+            {
+                using var pen = new Pen(Color.FromArgb(222, 225, 228));
+                e.Graphics.DrawLine(pen, 14, rowPanel.Height - 1, rowPanel.Width - 14, rowPanel.Height - 1);
+            };
+            rowPanel.Controls.Add(new Label
+            {
+                Location = new Point(14, 0),
+                Size = new Size(150, rowHeight - 1),
+                BackColor = Color.White,
+                ForeColor = Color.FromArgb(62, 66, 69),
+                TextAlign = ContentAlignment.MiddleLeft,
+                AutoEllipsis = true,
+                Text = row.Label
+            });
+            rowPanel.Controls.Add(new Label
+            {
+                Location = new Point(164, 0),
+                Size = new Size(content.Width - 178, rowHeight - 1),
+                Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right,
+                BackColor = Color.White,
+                ForeColor = Color.FromArgb(45, 48, 51),
+                TextAlign = ContentAlignment.MiddleRight,
+                AutoEllipsis = true,
+                Text = row.Value
+            });
+            content.Controls.Add(rowPanel);
+        }
+        body.Controls.Add(content);
+        card.Controls.Add(body);
+        return card;
     }
 
     private void DrawWeaponIcon(Graphics graphics, Rectangle bounds, JsonElement weapon)
