@@ -13,6 +13,7 @@ internal sealed class JsonDetailForm : Form
     private static readonly Color Accent = Color.FromArgb(213, 167, 95);
     private static readonly Color Good = Color.FromArgb(142, 226, 170);
     private static readonly Lazy<ModDictionaryData> ModDictionary = new(LoadModDictionary);
+    private readonly ImageCache _images = new();
     private readonly string _section;
     private readonly string _mode;
 
@@ -329,7 +330,7 @@ internal sealed class JsonDetailForm : Form
             BorderStyle = BorderStyle.None,
             IntegralHeight = false,
             DrawMode = DrawMode.OwnerDrawFixed,
-            ItemHeight = 52,
+            ItemHeight = 64,
             Font = new Font(Font.FontFamily, 9.3f)
         };
         list.DrawItem += (_, e) =>
@@ -345,11 +346,15 @@ internal sealed class JsonDetailForm : Form
             using var titleFont = new Font(list.Font, FontStyle.Bold);
             e.Graphics.FillRectangle(background, cardRect);
             e.Graphics.DrawRectangle(border, cardRect);
+
+            var iconRect = new Rectangle(cardRect.X + 7, cardRect.Y + 7, 44, 44);
+            DrawWeaponIcon(e.Graphics, iconRect, item.Weapon);
+            var textX = iconRect.Right + 8;
             e.Graphics.DrawString(String(item.Weapon, "name") ?? "挂载", titleFont, titleBrush,
-                new RectangleF(cardRect.X + 8, cardRect.Y + 6, cardRect.Width - 16, 18));
+                new RectangleF(textX, cardRect.Y + 7, cardRect.Right - textX - 7, 20));
             var slotsText = string.Join("/", IntArray(item.Weapon, "available_slots"));
             e.Graphics.DrawString($"{String(item.Weapon, "weight") ?? "无重量数据"} · {(slotsText.Length > 0 ? $"挂点 {slotsText}" : "预设挂载")}",
-                list.Font, detailBrush, new RectangleF(cardRect.X + 8, cardRect.Y + 27, cardRect.Width - 16, 17));
+                list.Font, detailBrush, new RectangleF(textX, cardRect.Y + 33, cardRect.Right - textX - 7, 19));
         };
         split.Panel1.Controls.Add(list);
         var detailHost = new Panel { Dock = DockStyle.Fill, AutoScroll = true, BackColor = WindowBack, Padding = new Padding(10) };
@@ -397,20 +402,117 @@ internal sealed class JsonDetailForm : Form
             rows.AddRange(parameters.EnumerateArray().Select(parameter => new DetailRow(TranslateCharacteristic(String(parameter, "label") ?? "参数"), TranslateValue(String(parameter, "value") ?? "—"), Value)));
         var panel = new Panel { Dock = DockStyle.Top, BackColor = WindowBack };
         var table = CreateRows(rows);
-        var title = SectionLabel(String(weapon, "name") ?? "挂载详情", Color.White, 11f);
-        title.Location = Point.Empty;
-        title.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-        table.Location = new Point(0, title.Height);
+        var header = new Panel { Location = Point.Empty, Height = 68, BackColor = CardBack };
+        var icon = new Panel { Location = new Point(8, 8), Size = new Size(52, 52), BackColor = CardBackAlt };
+        icon.Paint += (_, e) => DrawWeaponIcon(e.Graphics, new Rectangle(4, 4, 44, 44), weapon);
+        var title = new Label
+        {
+            Location = new Point(70, 8),
+            Height = 52,
+            AutoEllipsis = true,
+            TextAlign = ContentAlignment.MiddleLeft,
+            Font = new Font(Font.FontFamily, 10.5f, FontStyle.Bold),
+            ForeColor = Color.White,
+            Text = String(weapon, "name") ?? "挂载详情",
+            BackColor = Color.Transparent
+        };
+        header.Controls.Add(icon);
+        header.Controls.Add(title);
+        table.Location = new Point(0, header.Height + 4);
         table.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-        panel.Height = title.Height + table.Height;
+        panel.Height = header.Height + 4 + table.Height;
         panel.Resize += (_, _) =>
         {
-            title.Width = panel.ClientSize.Width;
+            header.Width = panel.ClientSize.Width;
+            title.Width = Math.Max(40, header.ClientSize.Width - title.Left - 8);
             table.Width = panel.ClientSize.Width;
         };
         panel.Controls.Add(table);
-        panel.Controls.Add(title);
+        panel.Controls.Add(header);
         return panel;
+    }
+
+    private void DrawWeaponIcon(Graphics graphics, Rectangle bounds, JsonElement weapon)
+    {
+        var image = _images.GetOrQueue(String(weapon, "icon_url"), () => QueueInvalidate(this));
+        if (image is not null)
+        {
+            var scale = Math.Min((float)bounds.Width / image.Width, (float)bounds.Height / image.Height);
+            var width = Math.Max(1, (int)Math.Round(image.Width * scale));
+            var height = Math.Max(1, (int)Math.Round(image.Height * scale));
+            var target = new Rectangle(bounds.X + (bounds.Width - width) / 2, bounds.Y + (bounds.Height - height) / 2, width, height);
+            graphics.DrawImage(image, target);
+            return;
+        }
+
+        DrawFallbackWeaponIcon(graphics, bounds, $"{String(weapon, "name")} {String(weapon, "icon_url")}");
+    }
+
+    private static void QueueInvalidate(Control control)
+    {
+        try
+        {
+            if (!control.IsDisposed && control.IsHandleCreated)
+                control.BeginInvoke(() => control.Invalidate(true));
+        }
+        catch (InvalidOperationException)
+        {
+            // The detail window may close while an icon download is completing.
+        }
+    }
+
+    private static void DrawFallbackWeaponIcon(Graphics graphics, Rectangle bounds, string descriptor)
+    {
+        descriptor = descriptor.ToLowerInvariant();
+        using var pen = new Pen(Accent, 2f);
+        using var borderPen = new Pen(Line);
+        using var fill = new SolidBrush(Color.FromArgb(54, 76, 89));
+        using var accentBrush = new SolidBrush(Accent);
+        graphics.FillRectangle(fill, bounds);
+        graphics.DrawRectangle(borderPen, bounds);
+
+        if (descriptor.Contains("bomb") || descriptor.Contains("mine") || descriptor.Contains("炸弹") || descriptor.Contains("水雷"))
+        {
+            var body = new Rectangle(bounds.X + bounds.Width / 3, bounds.Y + 8, bounds.Width / 3, bounds.Height - 18);
+            graphics.FillEllipse(accentBrush, body);
+            graphics.DrawLine(pen, body.Left, body.Bottom - 3, body.Left - 6, body.Bottom + 3);
+            graphics.DrawLine(pen, body.Right, body.Bottom - 3, body.Right + 6, body.Bottom + 3);
+            return;
+        }
+
+        if (descriptor.Contains("missile") || descriptor.Contains("rocket") || descriptor.Contains("torpedo") || descriptor.Contains("导弹") || descriptor.Contains("火箭") || descriptor.Contains("鱼雷"))
+        {
+            var middle = bounds.Y + bounds.Height / 2;
+            graphics.FillRectangle(accentBrush, bounds.X + 9, middle - 3, bounds.Width - 20, 7);
+            graphics.FillPolygon(accentBrush,
+            new Point[]
+            {
+                new Point(bounds.Right - 5, middle),
+                new Point(bounds.Right - 14, middle - 7),
+                new Point(bounds.Right - 14, middle + 7)
+            });
+            graphics.DrawLine(pen, bounds.X + 13, middle - 3, bounds.X + 7, middle - 10);
+            graphics.DrawLine(pen, bounds.X + 13, middle + 3, bounds.X + 7, middle + 10);
+            return;
+        }
+
+        if (descriptor.Contains("gun") || descriptor.Contains("cannon") || descriptor.Contains("机枪") || descriptor.Contains("机炮"))
+        {
+            graphics.FillEllipse(accentBrush, bounds.X + 7, bounds.Y + 22, 15, 15);
+            graphics.FillRectangle(accentBrush, bounds.X + 17, bounds.Y + 17, bounds.Width - 23, 7);
+            return;
+        }
+
+        var box = Rectangle.Inflate(bounds, -10, -12);
+        graphics.FillRectangle(accentBrush, box);
+        graphics.DrawLine(pen, box.Left, box.Top, box.Right, box.Bottom);
+        graphics.DrawLine(pen, box.Right, box.Top, box.Left, box.Bottom);
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        if (disposing) _images.Dispose();
+        base.Dispose(disposing);
     }
 
     private Control BuildModifications(JsonElement data)

@@ -8,11 +8,14 @@ internal sealed class ImageCache : IDisposable
     private static readonly HttpClient Client = new() { Timeout = TimeSpan.FromSeconds(12) };
     private readonly ConcurrentDictionary<string, Bitmap> _images = new(StringComparer.OrdinalIgnoreCase);
     private readonly ConcurrentDictionary<string, byte> _loading = new(StringComparer.OrdinalIgnoreCase);
+    private readonly ConcurrentDictionary<string, byte> _failed = new(StringComparer.OrdinalIgnoreCase);
+    private int _disposed;
 
     public Bitmap? GetOrQueue(string? url, Action loaded)
     {
         if (string.IsNullOrWhiteSpace(url) || !Uri.TryCreate(url, UriKind.Absolute, out var uri) || uri.Scheme != Uri.UriSchemeHttps)
             return null;
+        if (Volatile.Read(ref _disposed) != 0 || _failed.ContainsKey(url)) return null;
         if (_images.TryGetValue(url, out var image)) return image;
         if (_loading.TryAdd(url, 0)) _ = LoadAsync(url, loaded);
         return null;
@@ -32,12 +35,18 @@ internal sealed class ImageCache : IDisposable
                 graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
                 graphics.DrawImage(source, 0, 0, source.Width, source.Height);
             }
+            if (Volatile.Read(ref _disposed) != 0)
+            {
+                bitmap.Dispose();
+                return;
+            }
             _images[url] = bitmap;
             loaded();
         }
         catch
         {
             // Offline and individual image failures do not block the native tree.
+            _failed[url] = 0;
         }
         finally
         {
@@ -47,7 +56,10 @@ internal sealed class ImageCache : IDisposable
 
     public void Dispose()
     {
+        if (Interlocked.Exchange(ref _disposed, 1) != 0) return;
         foreach (var image in _images.Values) image.Dispose();
         _images.Clear();
+        _failed.Clear();
+        _loading.Clear();
     }
 }
