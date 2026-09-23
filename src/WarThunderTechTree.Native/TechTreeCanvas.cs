@@ -271,7 +271,10 @@ internal sealed class TechTreeCanvas : ScrollableControl
         }
 
         var textX = imageRect.Right + S(7);
-        var nameRect = new Rectangle(textX, card.Bounds.Y + S(7), card.Bounds.Right - textX - S(7), S(38));
+        var hasGroupToggle = card.GroupCount > 1;
+        var nameTop = card.Bounds.Y + S(hasGroupToggle ? 26 : 7);
+        var nameHeight = S(hasGroupToggle ? 20 : 38);
+        var nameRect = new Rectangle(textX, nameTop, card.Bounds.Right - textX - S(7), nameHeight);
         using var nameFont = new Font("Segoe UI Semibold", 12f * ScaleFactor, FontStyle.Bold, GraphicsUnit.Pixel);
         using var nameFormat = new StringFormat
         {
